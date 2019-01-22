@@ -37,7 +37,12 @@ return [
 
     'baidu_translate' => [
         'appid' => env('BAIDU_TRANSLATE_APPID'),
-        'key'   => env('BAIDU_TRANSLATE_KEY'),
+        'key' => env('BAIDU_TRANSLATE_KEY'),
     ],
 
+    'weixin' => [
+        'app_id' => env('WEIXIN_APP_ID'),
+        'app_secret' => env('WEIXIN_APP_SECRET'),
+        'redirect' => env('WEIXIN_REDIRECT_URI')
+    ],
 ];
