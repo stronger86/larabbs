@@ -41,8 +41,8 @@ return [
     ],
 
     'weixin' => [
-        'app_id' => env('WEIXIN_APP_ID'),
-        'app_secret' => env('WEIXIN_APP_SECRET'),
-        'redirect' => env('WEIXIN_REDIRECT_URI')
+        'client_id' => env('WEIXIN_KEY'),
+        'client_secret' => env('WEIXIN_SECRET'),
+        'redirect' => env('WEIXIN_REDIRECT_URI'),
     ],
 ];
