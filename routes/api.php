@@ -58,5 +58,9 @@ $api->version('v1', [
             $api->post('images', 'ImagesController@store')
                 ->name('api.images.store');
         });
+
+        // 游客可以访问的接口
+        $api->get('categories', 'CategoriesController@index')
+            ->name('api.categories.index');
     });
 });
