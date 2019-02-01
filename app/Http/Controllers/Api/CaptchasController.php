@@ -14,12 +14,12 @@ class CaptchasController extends Controller
         $phone = $request->phone;
 
         $captcha = $captchaBuilder->build();
-        $expiredAt = now()->addMinute(2);
+        $expiredAt = now()->addMinutes(2);
         \Cache::put($key, ['phone' => $phone, 'code' => $captcha->getPhrase()], $expiredAt);
 
         $result = [
             'captcha_key' => $key,
-            'expired_at' => $expiredAt->toDateString(),
+            'expired_at' => $expiredAt->toDateTimeString(),
             'captcha_image_content' => $captcha->inline()
         ];
 
