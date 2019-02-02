@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Topic;
 use App\Models\Reply;
 use App\Http\Requests\Api\ReplyRequest;
+use App\Models\User;
 use App\Transformers\ReplyTransformer;
 
 class RepliesController extends Controller
